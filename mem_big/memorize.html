@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<title>Memorize</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/memorize.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		$('.button').click(function(){
+			if($(this).html() == 'Start'){
+				startMemorize();
+			}
+			else if($(this).html() == 'Reset'){
+				resetMemorize();
+			}
+		});
+	});
+</script>
+<div id="wrap">
+	<h3>Memorize</h3>
+	<div class="board">
+		<span id="cell0" class="cell"></span>
+		<span id="cell1" class="cell"></span>
+		<span id="cell2" class="cell"></span>
+		<span id="cell3" class="cell"></span>
+		<span id="cell4" class="cell"></span>
+		<span id="cell5" class="cell"></span>
+		<span id="cell6" class="cell"></span>
+		<span id="cell7" class="cell"></span>
+		<span id="cell8" class="cell"></span>
+		<div class="clear"> </div>
+	</div>
+
+
+	<div id="rightPane">
+		<a href="#" class="button">Start</a>
+		<a href="#" class="button">Reset</a>
+		<div class="clear"> </div>
+		<span style="margin-left: 5px;">Difficulty</span><br/>
+		<ul class="noul">
+			<li><input type="radio" name="difficulty" value="3" checked="true" id="easy" /><label for="easy">Easy</label></li>
+			<li><input type="radio" name="difficulty" value="6" id="medium" /><label for="medium">Medium</label></li>
+			<li><input type="radio" name="difficulty" value="9" id="hard" /><label for="hard" >Hard</label></li>
+		</ul>
+		<span id="showTime">Time: 0.00s</span>
+		<span id="message"></span>
+	</div>
+	
+	<div class="clear"></div>
+
+</div id="wrap">
+
+</body>
+</html>
